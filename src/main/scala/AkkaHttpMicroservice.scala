@@ -36,14 +36,14 @@ trait Service extends Protocols {
       path("health") {
         (get) {
           complete {
-            ToResponseMarshallable(HealthStatus("UP"))
+            ToResponseMarshallable(HealthStatus("UP!"))
           }
         }
       } ~
       path("") {
         get {
           complete {
-            ToResponseMarshallable(Reply("Hello World"))
+            ToResponseMarshallable(Reply("Hello World!"))
           }
         }
       }

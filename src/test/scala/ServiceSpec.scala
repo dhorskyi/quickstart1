@@ -11,8 +11,8 @@ class ServiceSpec extends FlatSpec with Matchers with ScalatestRouteTest with Se
   override def testConfigSource = "akka.loglevel = WARNING"
   override def config = testConfig
   override val logger = NoLogging
-  val healthCheckReply = HealthStatus("UP");
-  val helloWorld = Reply("Hello World");
+  val healthCheckReply = HealthStatus("UP!");
+  val helloWorld = Reply("Hello World!");
 
   "Service" should "respond to health check" in {
     Get(s"/health") ~> routes ~> check {
